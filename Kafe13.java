@@ -25,6 +25,7 @@ public class Kafe13 {
                
         }
         double totalHarga = hargaMenu * jumlah;
+        // System.out.println("total harga " + totalHarga );
         switch (ukuranCup) {
             case 'S':
                 break;
@@ -34,6 +35,8 @@ public class Kafe13 {
             case 'L':
                 totalHarga += 0.4 * totalHarga;
                 break;
+            default:
+                System.out.println("selected size is not available");
         }
         double diskon = keanggotaan ? 0.1 : 0;
         double nominalBayar =totalHarga - (diskon * totalHarga);
